@@ -12,10 +12,10 @@
 <%= render @article.comments %>
  
 <h2>Add a comment:</h2>
-<%= render 'comments/form' %>
-
-
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+
+<%= link_to 'Article List', articles_path %>
+
   <p>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
