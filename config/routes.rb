@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get 'welcome/Index'
-  
-  resources :articles do
+get 'auth/:provider/callback', to: 'sessions#create'
+get 'auth/failure', to: redirect('/')
+get 'signout', to: 'session#destroy'
+
+resources :sessions, only: [:create, :destroy]
+get 'welcome/Index'
+
+resources :articles do
     resources :comments
   end
   
