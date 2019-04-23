@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+#Add Gem for Blog App
+gem "omniauth-google-oauth2", "~> 0.5.3"
+gem "omniauth-oauth2", "~> 1.5"
 
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
